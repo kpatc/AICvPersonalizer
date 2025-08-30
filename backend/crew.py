@@ -6,11 +6,6 @@ from crewai_tools import (
 	ScrapeWebsiteTool,
 	FileReadTool
 )
-from tools.custom_tool import GitHubProfileTool
-from tools.github_api_tool import GitHubAPITool
-from tools.github_repository_analyzer import GitHubRepositoryAnalyzer
-
-
 
 @CrewBase
 class AiCvPersonalizerLinkedinGithubIntegrationCrew:
@@ -40,8 +35,7 @@ class AiCvPersonalizerLinkedinGithubIntegrationCrew:
         return Agent(
             config=self.agents_config["github_profile_data_extractor"],
             tools=[
-				GitHubRepositoryAnalyzer(),
-                ScrapeWebsiteTool()  # Fallback si l'API échoue
+				ScrapeWebsiteTool()
             ],
             reasoning=False,
             inject_date=True,

@@ -64,6 +64,16 @@ npm start
 - **History Sidebar**: All your conversations
 - **Downloads**: Integrated export buttons
 
+## 🖼️ Frontend Screenshots
+
+Below are screenshots showing the main interface of the AI CV Personalizer frontend:
+
+### Main Generator Page
+![Main Generator Page](fr1.png)
+
+### CV Display Page
+![CV Display Page](fr2.png)
+
 ## 🔧 Technologies
 
 - **Frontend**: React 18, Tailwind CSS, Axios, React-Markdown
