@@ -6,7 +6,7 @@ An intelligent CV personalization tool that leverages AI to analyze your LinkedI
 
 - **🧠 AI-Powered Analysis**: Uses Google Gemini 2.0 Flash for intelligent profile analysis
 - **🔗 GitHub Integration**: Analyzes your GitHub repositories and projects
-- **� LinkedIn Data**: Integrates professional experience from LinkedIn
+- **💼 LinkedIn Data**: Integrates professional experience from LinkedIn
 - **🎯 Job Matching**: Personalizes CV content based on job descriptions
 - **📱 Modern Frontend**: React + TypeScript interface with Material-UI
 - **📄 PDF Export**: Generate professional PDF CVs
@@ -26,93 +26,63 @@ An intelligent CV personalization tool that leverages AI to analyze your LinkedI
 - **React Router**: Client-side routing
 - **Styled Components**: CSS-in-JS styling
 
-## 🚀 Démarrage rapide
+## 🖼️ Crew Agents Architecture
 
-### 1. Installation automatique
-```bash
-# Tout installer d'un coup
-./start.sh
-```
+Below is the architecture of the CrewAI agents and their connections:
 
-### 2. Configuration de l'API Gemini
+![Crew Agents Architecture](ArchitectureCrew.png)
+
+## 🚀 Quick Start
+
+### 1. Gemini API Configuration
 ```bash
-# Copier la clé API dans backend/.env
+# Copy your API key to backend/.env
 cd backend
-echo "GOOGLE_API_KEY=votre_cle_api_ici" > .env
+echo "GOOGLE_API_KEY=your_api_key_here" > .env
 ```
 
-### 3. Lancement (2 terminaux)
+### 2. Launch (2 terminals)
 
-**Terminal 1 - Backend :**
+**Terminal 1 - Backend:**
 ```bash
 cd backend
 uv run uvicorn main:app --reload
-# API sur http://localhost:8000
+# API on http://localhost:8000
 ```
 
-**Terminal 2 - Frontend :**
+**Terminal 2 - Frontend:**
 ```bash
 cd frontend  
 npm start
-# Interface sur http://localhost:3000
+# Interface on http://localhost:3000
 ```
 
-## 🎨 Interface utilisateur
+## 🎨 User Interface
 
-- **Zone de saisie** : Description du poste à gauche
-- **Affichage CV** : Résultat personnalisé à droite  
-- **Sidebar historique** : Toutes vos conversations
-- **Téléchargements** : Boutons d'export intégrés
+- **Input Area**: Job description on the left
+- **CV Display**: Personalized result on the right  
+- **History Sidebar**: All your conversations
+- **Downloads**: Integrated export buttons
 
 ## 🔧 Technologies
 
-- **Frontend** : React 18, Tailwind CSS, Axios, React-Markdown
-- **Backend** : FastAPI, Uvicorn, Pydantic
-- **IA** : CrewAI, Google Gemini 2.0 Flash
-- **Stockage** : Système de fichiers (extensible DB)
+- **Frontend**: React 18, Tailwind CSS, Axios, React-Markdown
+- **Backend**: FastAPI, Uvicorn, Pydantic
+- **AI**: CrewAI, Google Gemini 2.0 Flash
+- **Storage**: File system (extensible to DB)
 
-## 📁 Structure des dossiers
+## 🎯 Upcoming Features
 
-```
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Sidebar.js
-│   │   │   ├── CVDisplay.js
-│   │   │   └── JobDescriptionForm.js
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
-├── backend/
-│   ├── main.py              # API FastAPI
-│   ├── crew.py              # Agents CrewAI
-│   ├── crew_main.py         # CLI CrewAI
-│   ├── pyproject.toml       # Dépendances uv
-│   ├── knowledge/
-│   │   └── linkedin_data.json
-│   └── RECOMMENDATIONS/
-└── start.sh                 # Script d'installation
-```
-
-## 🔑 Endpoints API
-
-- `POST /generate-cv` : Génération de CV
-- `GET /history` : Historique des conversations  
-- `GET /cv/{id}` : Récupération d'un CV
-- `GET /download/{id}` : Téléchargement de CV
-
-## 🎯 Prochaines fonctionnalités
-
-- [ ] Base de données persistante
-- [ ] Authentification utilisateur
-- [ ] Templates de CV multiples
-- [ ] Export PDF
-- [ ] Analyse de compatibilité
-- [ ] Suggestions d'amélioration
+- [ ] Persistent database
+- [ ] User authentication
+- [ ] Multiple CV templates
+- [ ] PDF export
+- [ ] Compatibility analysis
+- [ ] Improvement suggestions
 
 ---
 
-**Développé avec ❤️ par l'équipe AI CV Personalizer**
+**Developed with ❤️ by the AI CV Personalizer team**
 
 
 
